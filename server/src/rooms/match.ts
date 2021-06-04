@@ -9,6 +9,7 @@ export class RoomMatch extends Room {
 
     // Authorize client based on provided options before WebSocket handshake is complete
     onAuth (client: Client, options: any, request: http.IncomingMessage) {
+        console.log(`[GameRoom] onAuth Client with sessionId: ${client.sessionId}`)
         return true;
     }
 
