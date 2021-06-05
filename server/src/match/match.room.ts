@@ -1,9 +1,11 @@
 import http from "http";
 import { Room, Client } from "colyseus";
-import logger from "../services/logger";
+import logger from "../services/logger.service";
+import { MatchState } from "./match.state";
 
-export class RoomMatch extends Room {
+export class MatchRoom extends Room<MatchState> {
     onCreate (options: any) {
+        this.setState(new MatchState())
         logger(`onCreate ${this.roomName} ${this.roomId}`, 'GameRoom')
         this.onMessage("*", (client, type, message) => {
             logger(`onMessage Client: ${client.sessionId} sent ${type} ${JSON.stringify(message)}`, 'GameRoom')
