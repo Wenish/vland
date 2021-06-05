@@ -12,6 +12,11 @@ export class CapturePointState extends Schema {
     @type('number') radius: number
 }
 
+export class CaptureFlagState extends Schema {
+    @type('string') id: string
+    @type(PositionState) position: PositionState
+}
+
 export class MapSizeState extends Schema {
     @type('number') width: number = 100
     @type('number') height: number = 200
@@ -21,6 +26,7 @@ export class MapState extends Schema {
     @type('string') mapName: string = 'cs_default'
     @type(MapSizeState) mapSize: MapSizeState = new MapSizeState()
     @type({ map: CapturePointState }) capturePoints = new MapSchema<CapturePointState>()
+    @type({ map: CaptureFlagState }) captureFlags = new MapSchema<CaptureFlagState>()
 }
 
 export class TeamState extends Schema {
