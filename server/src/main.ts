@@ -2,7 +2,7 @@ import { Server } from "colyseus"
 import { createServer } from "http";
 import express from 'express'
 import { monitor } from "@colyseus/monitor";
-import { RoomMatch } from "./rooms/match";
+import { RoomMatch } from "./rooms/roomMatch";
 import logger from "./services/logger";
 
 const port = parseInt(process.env.port, 10) || 3000
