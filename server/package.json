@@ -13,7 +13,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "colyseus": "^0.14.14"
+    "@colyseus/monitor": "^0.14.3",
+    "colyseus": "^0.14.14",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.6",
