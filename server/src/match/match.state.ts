@@ -30,14 +30,27 @@ export class TeamState extends Schema {
 }
 
 export class PlayerState extends Schema {
-    @type('string') public sessionId: string
-    @type('string') public username: string = 'Player'
+    @type('string') sessionId: string
+    @type('string') username: string = 'Player'
+}
+
+export class BarState extends Schema {
+    @type('number') current: number
+    @type('number') max: number
+    @type('number') regenerationSpeed: number
 }
 
 export class UnitState extends Schema {
-    @type('string') public id: string
-    @type('string') public name: string = 'Unit Name'
+    @type('string') id: string
+    @type('string') name: string = 'Unit Name'
     @type(PositionState) position: PositionState
+    @type('number') baseMoveSpeed: number
+    @type('number') rotation: number
+    @type('number') locomotionAnimationSpeedPercent: number
+    @type('boolean') isAlive: boolean
+    @type(BarState) health: BarState
+    @type(BarState) shield: BarState
+
 }
 
 export class MatchState extends Schema {
