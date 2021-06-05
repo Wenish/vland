@@ -37,6 +37,7 @@ export class PlayerState extends Schema {
 export class UnitState extends Schema {
     @type('string') public id: string
     @type('string') public name: string = 'Unit Name'
+    @type(PositionState) position: PositionState
 }
 
 export class MatchState extends Schema {
