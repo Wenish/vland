@@ -1,5 +1,5 @@
 import { Command } from "@colyseus/command";
-import { CapturePointState, MatchState, PositionState } from "../match.state";
+import { CaptureFlagState, CapturePointState, MatchState, PositionState, TeamState } from "../match.state";
 
 
 interface Position {
@@ -47,17 +47,32 @@ export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
             width: payload.mapSize.width,
             height: payload.mapSize.height
         })
+        payload.teams.forEach((team) => {
+            this.state.map.teams.set(team.id, new TeamState().assign({
+                id: team.id,
+                color: team.color
+            }))
+        })
 
-        console.log(payload)
-        this.state.map.capturePoints.set('1', new CapturePointState().assign({
-            id: '1',
-            position: new PositionState().assign({
-                x: 10,
-                y: 20,
-                z: 0
-            }),
-            radius: 15
-        }))
+        payload.capturePoints.forEach((capturePoint) => {
+            this.state.map.capturePoints.set(capturePoint.id, new CapturePointState().assign({
+                id: capturePoint.id,
+                position: new PositionState().assign({
+                    ...capturePoint.position
+                }),
+                radius: capturePoint.radius
+            }))
+        })
+
+        payload.captureFlags.forEach((captureFlag) => {
+            this.state.map.captureFlags.set(captureFlag.id, new CaptureFlagState().assign({
+                id: captureFlag.id,
+                position: new PositionState().assign({
+                    ...captureFlag.position
+                }),
+                teamId: captureFlag.teamId
+            }))
+        })
     }
 
 }

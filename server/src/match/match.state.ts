@@ -15,6 +15,7 @@ export class CapturePointState extends Schema {
 export class CaptureFlagState extends Schema {
     @type('string') id: string
     @type(PositionState) position: PositionState
+    @type('string') teamId: string
 }
 
 export class MapSizeState extends Schema {
