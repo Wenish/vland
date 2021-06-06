@@ -7,13 +7,15 @@ import { OnJoinCommand } from "./commands/onJoin.command";
 import { OnLeaveCommand } from "./commands/onLeave.command";
 import { LoadMapCommand } from "./commands/loadMap.command";
 
+import map from '../data/maps/cs_default.json'
+
 export class MatchRoom extends Room<MatchState> {
 
     dispatcher: Dispatcher = new Dispatcher(this);
 
     onCreate(options: any) {
         this.setState(new MatchState())
-        this.dispatcher.dispatch(new LoadMapCommand())
+        this.dispatcher.dispatch(new LoadMapCommand(), map)
         logger(`onCreate ${this.roomName} ${this.roomId}`, 'GameRoom')
         this.onMessage("*", (client, type, message) => {
             logger(`onMessage Client: ${client.sessionId} sent ${type} ${JSON.stringify(message)}`, 'GameRoom')
