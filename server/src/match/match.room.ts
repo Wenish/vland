@@ -1,5 +1,6 @@
 import http from "http";
 import { Room, Client } from "colyseus";
+import fsExtra from 'fs-extra'
 import logger from "../services/logger.service";
 import { MatchState } from "./match.state";
 import { Dispatcher } from "@colyseus/command";
@@ -7,15 +8,17 @@ import { OnJoinCommand } from "./commands/onJoin.command";
 import { OnLeaveCommand } from "./commands/onLeave.command";
 import { LoadMapCommand } from "./commands/loadMap.command";
 
-import map from '../data/maps/cs_default.json'
-
 export class MatchRoom extends Room<MatchState> {
 
     dispatcher: Dispatcher = new Dispatcher(this);
 
-    onCreate(options: any) {
+    async onCreate(options: any) {
+        const mapName: string = options?.map || 'cs_default'
+        //TODO: maybe check mapName for bad user input
+        const mapDataRaw = await fsExtra.readFile(`./data/maps/${mapName}.json`)
+        const mapData = JSON.parse(mapDataRaw)
         this.setState(new MatchState())
-        this.dispatcher.dispatch(new LoadMapCommand(), map)
+        this.dispatcher.dispatch(new LoadMapCommand(), mapData)
         logger(`onCreate ${this.roomName} ${this.roomId}`, 'GameRoom')
         this.onMessage("*", (client, type, message) => {
             logger(`onMessage Client: ${client.sessionId} sent ${type} ${JSON.stringify(message)}`, 'GameRoom')

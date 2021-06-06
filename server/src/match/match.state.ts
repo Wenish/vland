@@ -32,7 +32,6 @@ export class TeamState extends Schema {
 export class MapState extends Schema {
     @type('string') mapName: string
     @type(MapSizeState) mapSize: MapSizeState = new MapSizeState()
-    @type({ map: TeamState }) teams = new MapSchema<TeamState>()
     @type({ map: CapturePointState }) capturePoints = new MapSchema<CapturePointState>()
     @type({ map: CaptureFlagState }) captureFlags = new MapSchema<CaptureFlagState>()
 }
@@ -63,6 +62,7 @@ export class UnitState extends Schema {
 
 export class MatchState extends Schema {
     @type(MapState) map: MapState = new MapState()
+    @type({ map: TeamState }) teams = new MapSchema<TeamState>()
     @type({ map: PlayerState }) players = new MapSchema<PlayerState>()
     @type({ map: UnitState }) units = new MapSchema<UnitState>()
 }
