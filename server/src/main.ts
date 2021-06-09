@@ -14,3 +14,4 @@ const gameServer = new Server({
 gameServer.define('match', MatchRoom);
 gameServer.listen(port)
 logger(`Listening on Port: ${port}`, 'GameServer')
+logger(`Check Rooms at: http://localhost:${port}/colyseus`, 'GameServer')
