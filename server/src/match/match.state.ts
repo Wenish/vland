@@ -20,7 +20,7 @@ export class CaptureFlagState extends Schema {
 
 export class MapSizeState extends Schema {
     @type('number') width: number
-    @type('number') height: number
+    @type('number') length: number
 }
 
 export class TeamState extends Schema {

@@ -13,6 +13,6 @@ namespace Game.Scripts.Models {
 		public float width = default(float);
 
 		[Type(1, "number")]
-		public float height = default(float);
+		public float length = default(float);
 	}
 }

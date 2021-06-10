@@ -2,8 +2,8 @@
     "map": {
         "mapName": "cs_default",
         "mapSize": {
-            "width": 100,
-            "height": 200
+            "width": 200,
+            "length": 100
         },
         "capturePoints": [
             {

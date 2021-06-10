@@ -10,7 +10,7 @@ interface Position {
 
 interface MapSize {
     width: number
-    height: number
+    length: number
 }
 
 interface Team {
@@ -49,7 +49,7 @@ export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
         this.state.map.mapName = map.mapName
         this.state.map.mapSize.assign({
             width: map.mapSize.width,
-            height: map.mapSize.height
+            length: map.mapSize.length
         })
         teams.forEach((team) => {
             this.state.teams.set(team.id, new TeamState().assign({
