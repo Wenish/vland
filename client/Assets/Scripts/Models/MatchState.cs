@@ -7,7 +7,7 @@
 
 using Colyseus.Schema;
 
-namespace Game.Scripts.Models {
+namespace GameClient.Models {
 	public partial class MatchState : Schema {
 		[Type(0, "ref", typeof(MapState))]
 		public MapState map = new MapState();

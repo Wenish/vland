@@ -7,7 +7,7 @@
 
 using Colyseus.Schema;
 
-namespace Game.Scripts.Models {
+namespace GameClient.Models {
 	public partial class BarState : Schema {
 		[Type(0, "number")]
 		public float current = default(float);

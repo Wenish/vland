@@ -7,7 +7,7 @@
 
 using Colyseus.Schema;
 
-namespace Game.Scripts.Models {
+namespace GameClient.Models {
 	public partial class MapState : Schema {
 		[Type(0, "string")]
 		public string mapName = default(string);

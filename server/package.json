@@ -8,7 +8,7 @@
     "start": "ts-node src/main.ts",
     "start:dev": "ts-node-dev --watch \"src/**/*\" --respawn --transpile-only src/main.ts ",
     "start:prod": "node dist/main.js",
-    "schema-codegen": "schema-codegen src/match/match.state.ts --csharp --output ../client/Assets/Scripts/Models/ --namespace Game.Scripts.Models",
+    "schema-codegen": "schema-codegen src/match/match.state.ts --csharp --output ../client/Assets/Scripts/Models/ --namespace GameClient.Models",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

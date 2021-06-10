@@ -7,7 +7,7 @@
 
 using Colyseus.Schema;
 
-namespace Game.Scripts.Models {
+namespace GameClient.Models {
 	public partial class UnitState : Schema {
 		[Type(0, "string")]
 		public string id = default(string);

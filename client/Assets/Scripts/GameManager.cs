@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Colyseus;
-using Game.Scripts.Models;
+using GameClient.Models;
 using System;
 
-namespace Game.Scripts
+namespace GameClient
 {
     public class GameManager : MonoBehaviour
     {

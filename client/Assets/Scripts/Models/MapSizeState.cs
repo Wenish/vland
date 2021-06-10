@@ -7,7 +7,7 @@
 
 using Colyseus.Schema;
 
-namespace Game.Scripts.Models {
+namespace GameClient.Models {
 	public partial class MapSizeState : Schema {
 		[Type(0, "number")]
 		public float width = default(float);
