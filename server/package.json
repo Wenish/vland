@@ -8,7 +8,7 @@
     "start": "ts-node src/main.ts",
     "start:dev": "ts-node-dev --watch \"src/**/*\" --respawn --transpile-only src/main.ts ",
     "start:prod": "node dist/main.js",
-    "schema-codegen": "schema-codegen src/rooms/schema/* --csharp --output ../Assets/Scripts/States/",
+    "schema-codegen": "schema-codegen src/* --csharp --output ../Assets/Scripts/States/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
