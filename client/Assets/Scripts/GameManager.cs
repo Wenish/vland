@@ -4,6 +4,7 @@ using UnityEngine;
 using Colyseus;
 using GameClient.Models;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace GameClient
 {
@@ -11,7 +12,6 @@ namespace GameClient
     {
         public ColyseusClient ColyseusClient;
         public ColyseusRoom<MatchState> GameRoom;
-        public ColyseusRoom<MatchState> GameRoom2;
         private static GameManager _instance;
 
         public static GameManager Instance
@@ -28,7 +28,6 @@ namespace GameClient
             }
 
             _instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
 
         // Start is called before the first frame update
@@ -49,6 +48,8 @@ namespace GameClient
 
             var token = GetArg("-token");
             Debug.Log(token);
+
+            SceneManager.LoadScene("MapScene", LoadSceneMode.Additive);
 
             ColyseusClient = new ColyseusClient("ws://" + serverip + ":" + serverport);
 
