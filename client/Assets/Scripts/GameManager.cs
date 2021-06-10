@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Colyseus;
+using Game.Scripts.Models;
+using System;
 
 namespace Game.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-        public ColyseusClient colyseusClient;
+        public ColyseusClient ColyseusClient;
+        public ColyseusRoom<MatchState> GameRoom;
+        public ColyseusRoom<MatchState> GameRoom2;
         private static GameManager _instance;
 
         public static GameManager Instance
@@ -28,7 +32,7 @@ namespace Game.Scripts
         }
 
         // Start is called before the first frame update
-        async void Start()
+        public async void Start()
         {
             Debug.Log("Game Manager Start");
             var serverip = GetArg("-serverip");
@@ -46,9 +50,16 @@ namespace Game.Scripts
             var token = GetArg("-token");
             Debug.Log(token);
 
-            colyseusClient = new ColyseusClient("ws://" + serverip + ":" + serverport);
-            var room = await colyseusClient.JoinOrCreate("match");
+            ColyseusClient = new ColyseusClient("ws://" + serverip + ":" + serverport);
 
+            GameRoom = await ColyseusClient.JoinOrCreate<MatchState>("match");
+        }
+        private async void OnApplicationQuit()
+        {
+            Debug.Log("OnApplicationQuit: Leave GameRoom");
+            if(GameRoom != null) {
+                await GameRoom.Leave();
+            }
         }
 
         private static string GetArg(string name)

@@ -41,7 +41,7 @@ export class MatchRoom extends Room<MatchState> {
         this.dispatcher.dispatch(new OnLeaveCommand(), {
             sessionId: client.sessionId
         });
-        logger(`onLeave Client with sessionId: ${client.sessionId}`, 'GameRoom')
+        logger(`onLeave Client with sessionId: ${client.sessionId} consented: ${consented}`, 'GameRoom')
     }
 
     onDispose() {
