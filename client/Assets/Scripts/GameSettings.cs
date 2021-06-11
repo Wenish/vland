@@ -18,7 +18,7 @@ namespace GameClient
         {
             get { return _instance; }
         }
-        void Start()
+        private void Awake()
         {
             Debug.Log("GameSettings Start");
             var serverip = GetArg("-serverip");
@@ -31,8 +31,17 @@ namespace GameClient
 
             var Token = GetArg("-token");
             Debug.Log(Token);
-        }
 
+            // Singelton Stuff
+            if (_instance != null && _instance != this)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
+
+            _instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
         private static string GetArg(string name)
         {
             var args = System.Environment.GetCommandLineArgs();
@@ -45,16 +54,6 @@ namespace GameClient
             }
             return null;
         }
-        private void Awake()
-        {
-            if (_instance != null && _instance != this)
-            {
-                Destroy(this.gameObject);
-                return;
-            }
 
-            _instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
     }
 }

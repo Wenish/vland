@@ -43,8 +43,6 @@
         "client/**/*.meta":true,
         "client/**/*.prefab":true,
         "client/**/*.unity":true,
-        "client/**/*.csproj":true,
-        "client/**/*.sln":true,
         "build/":true,
         "Build/":true,
         "client/Library/":true,

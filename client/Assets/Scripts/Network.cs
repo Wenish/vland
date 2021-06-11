@@ -36,6 +36,7 @@ namespace GameClient
             }
             catch
             {
+                Debug.LogError("Cant Connect To Server");
                 return false;
             }
         }
