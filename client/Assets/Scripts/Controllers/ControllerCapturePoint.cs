@@ -2,9 +2,9 @@ using UnityEngine;
 using GameClient.Models;
 
 namespace GameClient.Controllers {
-    public class ControllerCaptureFlag : MonoBehaviour {
+    public class ControllerCapturePoint : MonoBehaviour {
         public string Key = null;
-        public CaptureFlagState captureFlagState;
+        public CapturePointState capturePointState;
 
         public void Start () {
 

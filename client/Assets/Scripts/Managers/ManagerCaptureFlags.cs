@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameClient.Models;
 
-namespace GameClient
+namespace GameClient.Managers
 {
-    public class MapManager : MonoBehaviour
+    public class ManagerCaptureFlags : MonoBehaviour
     {
-        public Dictionary<string, GameObject> CapturePoints = new Dictionary<string, GameObject>();
         public Dictionary<string, GameObject> CaptureFlags = new Dictionary<string, GameObject>();
-        private static MapManager _instance;
+        private static ManagerCaptureFlags _instance;
 
-        public static MapManager Instance
+        public static ManagerCaptureFlags Instance
         {
             get { return _instance; }
         }

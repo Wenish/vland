@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameClient
+namespace GameClient.Managers
 {
-    public class GameSettings : MonoBehaviour
+    public class ManagerSettings : MonoBehaviour
     {
         public string ServerIp = null;
         public string ServerPort = null;
@@ -12,9 +12,9 @@ namespace GameClient
         public GameObject CapturePoint;
         public GameObject CaptureFlag;
         public GameObject Unit;
-        private static GameSettings _instance;
+        private static ManagerSettings _instance;
 
-        public static GameSettings Instance
+        public static ManagerSettings Instance
         {
             get { return _instance; }
         }

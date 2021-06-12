@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using GameClient.Controllers;
+using GameClient.Managers;
 using GameClient.Models;
 using UnityEngine;
 
@@ -14,23 +17,31 @@ namespace GameClient.StateHandlers
                 return lazy.Value;
             }
         }
-        public void OnAdd(string key, CapturePointState stateType)
+        public void OnAdd(string key, CapturePointState value)
         {
-            Debug.Log(key);
-            GameObject gameObjectCapturePoint = GameObject.Instantiate(GameSettings.Instance.CapturePoint);
-            MapManager.Instance.CapturePoints.Add(key, gameObjectCapturePoint);
-            Debug.Log("CapturePointAdd");
-            Debug.Log("On Add");
+            GameObject gameObject = GameObject.Instantiate(ManagerSettings.Instance.CapturePoint);
+            gameObject.name = "Capture Point " + key;
+            ControllerCapturePoint controller = gameObject.GetComponent<ControllerCapturePoint>();
+            controller.Key = key;
+            controller.capturePointState = value;
+            ManagerCapturePoints.Instance.CapturePoints.Add(key, gameObject);
+            Debug.Log("On Add CapturePointState");
         }
 
-        public void OnChange(string key, CapturePointState stateType)
+        public void OnChange(string key, CapturePointState value)
         {
-            Debug.Log("On Change");
+            GameObject gameObject = ManagerCapturePoints.Instance.CapturePoints[key];
+            ControllerCapturePoint controller = gameObject.GetComponent<ControllerCapturePoint>();
+            controller.capturePointState = value;
+            Debug.Log("On Change CapturePointState");
         }
 
-        public void OnRemove(string key, CapturePointState stateType)
+        public void OnRemove(string key, CapturePointState value)
         {
-            Debug.Log("On Remove");
+            GameObject gameObject = ManagerCapturePoints.Instance.CapturePoints[key];
+            GameObject.Destroy(gameObject);
+            ManagerCapturePoints.Instance.CapturePoints.Remove(key);
+            Debug.Log("On Remove CapturePointState");
         }
     }
 }

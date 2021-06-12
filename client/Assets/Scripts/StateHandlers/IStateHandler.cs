@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace GameClient.StateHandlers
 {
-    public interface IStateHandler<StateType>
+    public interface IStateHandler<Schema>
     {
-        void OnAdd(string key, StateType stateType);
-        void OnChange(string key, StateType stateType);
-        void OnRemove(string key, StateType stateType);
+        void OnAdd(string key, Schema value);
+        void OnChange(string key, Schema value);
+        void OnRemove(string key, Schema value);
     }
 }
