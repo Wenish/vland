@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Colyseus;
 using GameClient.Models;
+using GameClient.StateHandlers;
 using NativeWebSocket;
 using UnityEngine;
 
@@ -32,8 +33,8 @@ namespace GameClient
             try
             {
                 GameRoom = await ColyseusClient.JoinOrCreate<MatchState>("match");
-                GameRoom.State.map.capturePoints.OnAdd += StateHandler.OnCapturePointAdd;
-                GameRoom.State.map.captureFlags.OnAdd += StateHandler.OnCaptureFlagAdd;
+                GameRoom.State.map.capturePoints.OnAdd += StateHandlerCapturePoint.Instance.OnAdd;
+                GameRoom.State.map.captureFlags.OnAdd += StateHandlerCaptureFlag.Instance.OnAdd;
                 return true;
             }
             catch
