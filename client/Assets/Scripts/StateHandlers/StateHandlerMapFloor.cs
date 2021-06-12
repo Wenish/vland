@@ -23,9 +23,9 @@ namespace GameClient.StateHandlers
         public void OnChange(List<Colyseus.Schema.DataChange> changes)
         {
             GameObject gameObject = ManagerMapFloor.Instance.MapFloor;
-            ControllerMapSize controller = gameObject.GetComponent<ControllerMapSize>();
-            controller.Width = ManagerNetwork.Instance.GameRoom.State.map.mapSize.width;
-            controller.Length = ManagerNetwork.Instance.GameRoom.State.map.mapSize.length;
+            ControllerMapFloor controller = gameObject.GetComponent<ControllerMapFloor>();
+            controller.Width = ManagerNetwork.Instance.GameRoom.State.map.mapFloor.width;
+            controller.Length = ManagerNetwork.Instance.GameRoom.State.map.mapFloor.length;
         }
 
         public void OnRemove()

@@ -12,8 +12,8 @@ namespace GameClient.Models {
 		[Type(0, "string")]
 		public string mapName = default(string);
 
-		[Type(1, "ref", typeof(MapSizeState))]
-		public MapSizeState mapSize = new MapSizeState();
+		[Type(1, "ref", typeof(MapFloorState))]
+		public MapFloorState mapFloor = new MapFloorState();
 
 		[Type(2, "map", typeof(MapSchema<CapturePointState>))]
 		public MapSchema<CapturePointState> capturePoints = new MapSchema<CapturePointState>();

@@ -1,7 +1,7 @@
 {
     "map": {
         "mapName": "cs_default",
-        "mapSize": {
+        "mapFloor": {
             "width": 200,
             "length": 100
         },

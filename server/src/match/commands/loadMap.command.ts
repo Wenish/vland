@@ -8,7 +8,7 @@ interface Position {
     z: number
 }
 
-interface MapSize {
+interface MapFloor {
     width: number
     length: number
 }
@@ -32,7 +32,7 @@ interface CaptureFlag {
 
 interface Map {
     mapName: string
-    mapSize: MapSize
+    mapFloor: MapFloor
     capturePoints: CapturePoint[]
     captureFlags: CaptureFlag[]
 }
@@ -47,9 +47,9 @@ export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
 
     execute({ map, teams }: LoadMapPayload) {
         this.state.map.mapName = map.mapName
-        this.state.map.mapSize.assign({
-            width: map.mapSize.width,
-            length: map.mapSize.length
+        this.state.map.mapFloor.assign({
+            width: map.mapFloor.width,
+            length: map.mapFloor.length
         })
         teams.forEach((team) => {
             this.state.teams.set(team.id, new TeamState().assign({

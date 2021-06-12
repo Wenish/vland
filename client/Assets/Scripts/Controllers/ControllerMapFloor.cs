@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameClient.Controllers
 {
-    public class ControllerMapSize : MonoBehaviour
+    public class ControllerMapFloor : MonoBehaviour
     {
         private float _width;
         public float Width
