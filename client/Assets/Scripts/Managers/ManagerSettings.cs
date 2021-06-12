@@ -13,6 +13,10 @@ namespace GameClient.Managers
         public GameObject CapturePoint;
         public GameObject CaptureFlag;
         public GameObject Unit;
+
+        public GameObject Block;
+        public GameObject BlockSnow;
+
         private static ManagerSettings _instance;
 
         public static ManagerSettings Instance
