@@ -23,14 +23,15 @@ namespace GameClient.Managers
         {
             Debug.Log("GameSettings Start");
             var serverip = GetArg("-serverip");
-            ServerIp = serverip != null ? serverip : "localhost";
+            ServerIp = serverip != null ? serverip : ServerIp;
             Debug.Log(ServerIp);
 
             var serverport = GetArg("-serverport");
-            ServerPort = serverport != null ? serverport : "3000";
+            ServerPort = serverport != null ? serverport : ServerPort;
             Debug.Log(ServerPort);
 
-            var Token = GetArg("-token");
+            var token = GetArg("-token");
+            Token = token != null ? token : Token;
             Debug.Log(Token);
 
             // Singleton Stuff
