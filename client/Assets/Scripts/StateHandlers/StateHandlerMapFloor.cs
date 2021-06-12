@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameClient.Controllers;
 using GameClient.Managers;
 using GameClient.Models;
 using GameClient.StateHandlers;
@@ -21,7 +22,10 @@ namespace GameClient.StateHandlers
 
         public void OnChange(List<Colyseus.Schema.DataChange> changes)
         {
-            throw new System.NotImplementedException();
+            GameObject gameObject = ManagerMapFloor.Instance.MapFloor;
+            ControllerMapSize controller = gameObject.GetComponent<ControllerMapSize>();
+            controller.Width = ManagerNetwork.Instance.GameRoom.State.map.mapSize.width;
+            controller.Length = ManagerNetwork.Instance.GameRoom.State.map.mapSize.length;
         }
 
         public void OnRemove()

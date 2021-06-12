@@ -27,6 +27,7 @@ namespace GameClient.Managers
         void Start()
         {
             MapFloor = Instantiate(ManagerSettings.Instance.MapFloor);
+            MapFloor.name = "Map Floor";
         }
     }
 }
