@@ -32,6 +32,8 @@ namespace GameClient
             try
             {
                 GameRoom = await ColyseusClient.JoinOrCreate<MatchState>("match");
+                GameRoom.State.map.capturePoints.OnAdd += StateHandler.OnCapturePointAdd;
+                GameRoom.State.map.captureFlags.OnAdd += StateHandler.OnCaptureFlagAdd;
                 return true;
             }
             catch
