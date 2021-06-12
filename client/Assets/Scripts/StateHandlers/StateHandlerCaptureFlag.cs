@@ -22,7 +22,7 @@ namespace GameClient.StateHandlers
             gameObject.name = "Capture Flag " + key;
             ControllerCaptureFlag controller = gameObject.GetComponent<ControllerCaptureFlag>();
             controller.Key = key;
-            controller.captureFlagState = value;
+            controller.CaptureFlagState = value;
             ManagerCaptureFlags.Instance.CaptureFlags.Add(key, gameObject);
             Debug.Log("On Add CaptureFlagState");
         }
@@ -31,7 +31,7 @@ namespace GameClient.StateHandlers
         {
             GameObject gameObject = ManagerCaptureFlags.Instance.CaptureFlags[key];
             ControllerCaptureFlag controller = gameObject.GetComponent<ControllerCaptureFlag>();
-            controller.captureFlagState = value;
+            controller.CaptureFlagState = value;
             Debug.Log("On Change CaptureFlagState");
         }
 
