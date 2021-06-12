@@ -9,6 +9,7 @@ namespace GameClient.Managers
         public string ServerIp = null;
         public string ServerPort = null;
         public string Token = null;
+        public GameObject MapFloor;
         public GameObject CapturePoint;
         public GameObject CaptureFlag;
         public GameObject Unit;
