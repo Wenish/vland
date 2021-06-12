@@ -32,7 +32,7 @@ namespace GameClient
             var Token = GetArg("-token");
             Debug.Log(Token);
 
-            // Singelton Stuff
+            // Singleton Stuff
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
