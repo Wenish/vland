@@ -12,8 +12,6 @@ namespace GameClient.Controllers
             get { return _width; }
             set
             {
-                Terrain terrain = gameObject.GetComponent<Terrain>();
-                terrain.terrainData.size = new Vector3(value, terrain.terrainData.size.y, terrain.terrainData.size.z);
                 _width = value;
             }
         }
@@ -24,8 +22,6 @@ namespace GameClient.Controllers
             get { return _length; }
             set
             {
-                Terrain terrain = gameObject.GetComponent<Terrain>();
-                terrain.terrainData.size = new Vector3(terrain.terrainData.size.x, terrain.terrainData.size.y, value);
                 _length = value;
             }
         }
