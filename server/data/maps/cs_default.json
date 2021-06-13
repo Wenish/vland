@@ -182,7 +182,7 @@
                 }
             },
             {
-                "type": "BlockGrass",
+                "type": "BlockDirt",
                 "position": {
                     "x": 2,
                     "y": 0,
@@ -2446,7 +2446,7 @@
                 }
             },
             {
-                "type": "BlockGrass",
+                "type": "BlockSnow",
                 "position": {
                     "x": 28,
                     "y": 0,
@@ -2603,6 +2603,246 @@
                     "x": 3,
                     "y": 0,
                     "z": 8
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 7,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 7,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 8,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 8,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 10,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 10,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 11,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 18,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 19,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 27,
+                    "y": 0,
+                    "z": 12
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 27,
+                    "y": 0,
+                    "z": 13
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 27,
+                    "y": 0,
+                    "z": 14
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 28,
+                    "y": 0,
+                    "z": 12
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 28,
+                    "y": 0,
+                    "z": 13
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 28,
+                    "y": 0,
+                    "z": 14
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 18
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 18
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 18
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 18
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 18
                 }
             }
         ]
