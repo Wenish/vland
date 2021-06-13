@@ -46,9 +46,10 @@ namespace GameClient.Managers
                 GameRoom.State.map.captureFlags.OnAdd += StateHandlerCaptureFlag.Instance.OnAdd;
                 GameRoom.State.map.captureFlags.OnChange += StateHandlerCaptureFlag.Instance.OnChange;
                 GameRoom.State.map.captureFlags.OnRemove += StateHandlerCaptureFlag.Instance.OnRemove;
-                
-                GameRoom.State.map.mapFloor.OnChange += StateHandlerMapFloor.Instance.OnChange;
-                GameRoom.State.map.mapFloor.OnRemove += StateHandlerMapFloor.Instance.OnRemove;
+
+                GameRoom.State.map.floorBlocks.OnAdd += StateHandlerFloorBlocks.Instance.OnAdd;
+                GameRoom.State.map.floorBlocks.OnChange += StateHandlerFloorBlocks.Instance.OnChange;
+                GameRoom.State.map.floorBlocks.OnRemove += StateHandlerFloorBlocks.Instance.OnRemove;
             }
             catch
             {

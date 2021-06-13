@@ -25,7 +25,6 @@ namespace GameClient.StateHandlers
             controller.Key = key;
             controller.CapturePointState = value;
             ManagerCapturePoints.Instance.CapturePoints.Add(key, gameObject);
-            Debug.Log("On Add CapturePointState");
         }
 
         public void OnChange(string key, CapturePointState value)
@@ -33,7 +32,6 @@ namespace GameClient.StateHandlers
             GameObject gameObject = ManagerCapturePoints.Instance.CapturePoints[key];
             ControllerCapturePoint controller = gameObject.GetComponent<ControllerCapturePoint>();
             controller.CapturePointState = value;
-            Debug.Log("On Change CapturePointState");
         }
 
         public void OnRemove(string key, CapturePointState value)
@@ -41,7 +39,6 @@ namespace GameClient.StateHandlers
             GameObject gameObject = ManagerCapturePoints.Instance.CapturePoints[key];
             GameObject.Destroy(gameObject);
             ManagerCapturePoints.Instance.CapturePoints.Remove(key);
-            Debug.Log("On Remove CapturePointState");
         }
     }
 }

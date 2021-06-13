@@ -24,7 +24,6 @@ namespace GameClient.StateHandlers
             controller.Key = key;
             controller.CaptureFlagState = value;
             ManagerCaptureFlags.Instance.CaptureFlags.Add(key, gameObject);
-            Debug.Log("On Add CaptureFlagState");
         }
 
         public void OnChange(string key, CaptureFlagState value)
@@ -32,7 +31,6 @@ namespace GameClient.StateHandlers
             GameObject gameObject = ManagerCaptureFlags.Instance.CaptureFlags[key];
             ControllerCaptureFlag controller = gameObject.GetComponent<ControllerCaptureFlag>();
             controller.CaptureFlagState = value;
-            Debug.Log("On Change CaptureFlagState");
         }
 
         public void OnRemove(string key, CaptureFlagState value)
@@ -40,7 +38,6 @@ namespace GameClient.StateHandlers
             GameObject gameObject = ManagerCaptureFlags.Instance.CaptureFlags[key];
             GameObject.Destroy(gameObject);
             ManagerCaptureFlags.Instance.CaptureFlags.Remove(key);
-            Debug.Log("On Remove CaptureFlagState");
         }
     }
 }

@@ -50,5 +50,7 @@ MonoBehaviour:
   CapturePoint: {fileID: 2587118217474729591, guid: 61fad6aeee99fa749a90a8a37df28444, type: 3}
   CaptureFlag: {fileID: 6898570068011468056, guid: 49708c74d4b247347812471942bdb162, type: 3}
   Unit: {fileID: 9135262891598335356, guid: f8888f8668d3bf743b456908051a5471, type: 3}
-  Block: {fileID: 919132149155446097, guid: ecdb1b0ea1bf30c4ea8d39f8ce74cb66, type: 3}
-  BlockSnow: {fileID: 919132149155446097, guid: af7408807640f7c47891ace0f77320bf, type: 3}
+  BlockGrass: {fileID: 11400000, guid: e9d426f6e9a05ce4181287ea9b253b99, type: 2}
+  BlockSnow: {fileID: 11400000, guid: 51525ea9accf37c49b8b6b5b70a6683c, type: 2}
+  BlockDirt: {fileID: 11400000, guid: 421cff3d32697f243affd8854d5c9512, type: 2}
+  BlockBridge: {fileID: 11400000, guid: 03f255380d31f7a43ab9d48ca66aee6c, type: 2}

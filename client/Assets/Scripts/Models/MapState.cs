@@ -10,10 +10,10 @@ using Colyseus.Schema;
 namespace GameClient.Models {
 	public partial class MapState : Schema {
 		[Type(0, "string")]
-		public string mapName = default(string);
+		public string name = default(string);
 
-		[Type(1, "ref", typeof(MapFloorState))]
-		public MapFloorState mapFloor = new MapFloorState();
+		[Type(1, "map", typeof(MapSchema<FloorBlockState>))]
+		public MapSchema<FloorBlockState> floorBlocks = new MapSchema<FloorBlockState>();
 
 		[Type(2, "map", typeof(MapSchema<CapturePointState>))]
 		public MapSchema<CapturePointState> capturePoints = new MapSchema<CapturePointState>();

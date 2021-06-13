@@ -1,10 +1,16 @@
 {
-    "map": {
-        "mapName": "cs_default",
-        "mapFloor": {
-            "width": 200,
-            "length": 100
+    "teams": [
+        {
+            "id": "1",
+            "color": "red"
         },
+        {
+            "id": "2",
+            "color": "blue"
+        }
+    ],
+    "map": {
+        "name": "cs_default",
         "capturePoints": [
             {
                 "id": "1",
@@ -20,9 +26,9 @@
             {
                 "id": "1",
                 "position": {
-                    "x": 10,
+                    "x": 1,
                     "y": 0,
-                    "z": 50
+                    "z": 1
                 },
                 "teamId": "1"
             },
@@ -35,16 +41,88 @@
                 },
                 "teamId": "2"
             }
+        ],
+        "floorBlocks": [
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockSnow",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockDirt",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockDirt",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 3
+                }
+            }
         ]
-    },
-    "teams": [
-        {
-            "id": "1",
-            "color": "red"
-        },
-        {
-            "id": "2",
-            "color": "blue"
-        }
-    ]
+    }
 }

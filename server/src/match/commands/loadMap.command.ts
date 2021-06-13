@@ -1,5 +1,5 @@
 import { Command } from "@colyseus/command";
-import { CaptureFlagState, CapturePointState, MatchState, PositionState, TeamState } from "../match.state";
+import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, TeamState } from "../match.state";
 
 
 interface Position {
@@ -8,9 +8,9 @@ interface Position {
     z: number
 }
 
-interface MapFloor {
-    width: number
-    length: number
+interface FloorBlock {
+    type: FloorBlockTypes,
+    position: Position
 }
 
 interface Team {
@@ -31,8 +31,8 @@ interface CaptureFlag {
 }
 
 interface Map {
-    mapName: string
-    mapFloor: MapFloor
+    name: string
+    floorBlocks: FloorBlock[]
     capturePoints: CapturePoint[]
     captureFlags: CaptureFlag[]
 }
@@ -46,10 +46,14 @@ interface LoadMapPayload {
 export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
 
     execute({ map, teams }: LoadMapPayload) {
-        this.state.map.mapName = map.mapName
-        this.state.map.mapFloor.assign({
-            width: map.mapFloor.width,
-            length: map.mapFloor.length
+        this.state.map.name = map.name;
+        map.floorBlocks.forEach((floorBlock) => {
+            this.state.map.floorBlocks.set(`${floorBlock.position.x}${floorBlock.position.y}${floorBlock.position.z}`, new FloorBlockState().assign({
+                type: floorBlock.type,
+                position: new PositionState().assign({
+                    ...floorBlock.position
+                })
+            }))
         })
         teams.forEach((team) => {
             this.state.teams.set(team.id, new TeamState().assign({

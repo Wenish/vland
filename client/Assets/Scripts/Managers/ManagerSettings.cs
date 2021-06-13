@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace GameClient.Managers
 {
@@ -14,8 +15,10 @@ namespace GameClient.Managers
         public GameObject CaptureFlag;
         public GameObject Unit;
 
-        public GameObject Block;
-        public GameObject BlockSnow;
+        public TileBase BlockGrass;
+        public TileBase BlockSnow;
+        public TileBase BlockDirt;
+        public TileBase BlockBridge;
 
         private static ManagerSettings _instance;
 

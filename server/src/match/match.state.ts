@@ -18,9 +18,16 @@ export class CaptureFlagState extends Schema {
     @type('string') teamId: string
 }
 
-export class MapFloorState extends Schema {
-    @type('number') width: number
-    @type('number') length: number
+export enum FloorBlockTypes {
+    BlockGrass = 'BlockGrass',
+    BlockDirt = 'BlockDirt',
+    BlockSnow = 'BlockSnow',
+    BlockBridge = 'BlockBridge'
+}
+
+export class FloorBlockState extends Schema {
+    @type('string') type: FloorBlockTypes
+    @type(PositionState) position: PositionState
 }
 
 export class TeamState extends Schema {
@@ -30,8 +37,8 @@ export class TeamState extends Schema {
 }
 
 export class MapState extends Schema {
-    @type('string') mapName: string
-    @type(MapFloorState) mapFloor: MapFloorState = new MapFloorState()
+    @type('string') name: string
+    @type({ map: FloorBlockState }) floorBlocks = new MapSchema<FloorBlockState>()
     @type({ map: CapturePointState }) capturePoints = new MapSchema<CapturePointState>()
     @type({ map: CaptureFlagState }) captureFlags = new MapSchema<CaptureFlagState>()
 }

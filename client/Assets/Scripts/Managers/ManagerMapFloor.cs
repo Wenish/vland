@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace GameClient.Managers
 {
     public class ManagerMapFloor : MonoBehaviour
     {
-        public GameObject MapFloor;
+        public GameObject MapFloor { get; private set; }
+        public Tilemap Tilemap { get; private set; }
         private static ManagerMapFloor _instance;
 
         public static ManagerMapFloor Instance
@@ -28,6 +30,7 @@ namespace GameClient.Managers
         {
             MapFloor = Instantiate(ManagerSettings.Instance.MapFloor);
             MapFloor.name = "Map Floor";
+            Tilemap = MapFloor.GetComponentInChildren<Tilemap>();
         }
     }
 }
