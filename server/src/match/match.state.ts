@@ -19,10 +19,10 @@ export class CaptureFlagState extends Schema {
 }
 
 export enum FloorBlockTypes {
-    BlockGrass = 'BlockGrass',
-    BlockDirt = 'BlockDirt',
-    BlockSnow = 'BlockSnow',
-    BlockBridge = 'BlockBridge'
+    BlockGrass = 'Grass',
+    BlockDirt = 'Dirt',
+    BlockSnow = 'Snow',
+    BlockBridge = 'Bridge'
 }
 
 export class FloorBlockState extends Schema {

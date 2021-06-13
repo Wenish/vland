@@ -25,16 +25,16 @@ namespace GameClient.StateHandlers
 
             switch (value.type)
             {
-                case "BlockGrass":
+                case "Grass":
                     tileBase = ManagerSettings.Instance.BlockGrass;
                     break;
-                case "BlockDirt":
+                case "Dirt":
                     tileBase = ManagerSettings.Instance.BlockDirt;
                     break;
-                case "BlockSnow":
+                case "Snow":
                     tileBase = ManagerSettings.Instance.BlockSnow;
                     break;
-                case "BlockBridge":
+                case "Bridge":
                     tileBase = ManagerSettings.Instance.BlockBridge;
                     break;
                 default:
