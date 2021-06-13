@@ -15,29 +15,47 @@
             {
                 "id": "1",
                 "position": {
-                    "x": 100,
+                    "x": 8,
                     "y": 0,
-                    "z": 50
+                    "z": 18
                 },
-                "radius": 9
+                "radius": 3
+            },
+            {
+                "id": "2",
+                "position": {
+                    "x": 15,
+                    "y": 0,
+                    "z": 10
+                },
+                "radius": 4
+            },
+            {
+                "id": "3",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 2
+                },
+                "radius": 3
             }
         ],
         "captureFlags": [
             {
                 "id": "1",
                 "position": {
-                    "x": 1,
+                    "x": 3,
                     "y": 0,
-                    "z": 1
+                    "z": 11
                 },
                 "teamId": "1"
             },
             {
                 "id": "2",
                 "position": {
-                    "x": 190,
+                    "x": 27,
                     "y": 0,
-                    "z": 50
+                    "z": 9
                 },
                 "teamId": "2"
             }
@@ -48,35 +66,51 @@
                 "position": {
                     "x": 0,
                     "y": 0,
-                    "z": 0
+                    "z": 1
                 }
             },
             {
                 "type": "BlockGrass",
-                "position": {
-                    "x": 1,
-                    "y": 0,
-                    "z": 0
-                }
-            },
-            {
-                "type": "BlockGrass",
-                "position": {
-                    "x": 2,
-                    "y": 0,
-                    "z": 0
-                }
-            },
-            {
-                "type": "BlockSnow",
                 "position": {
                     "x": 0,
                     "y": 0,
-                    "z": 1
+                    "z": 2
                 }
             },
             {
-                "type": "BlockDirt",
+                "type": "BlockGrass",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
                 "position": {
                     "x": 1,
                     "y": 0,
@@ -84,15 +118,7 @@
                 }
             },
             {
-                "type": "BlockDirt",
-                "position": {
-                    "x": 2,
-                    "y": 0,
-                    "z": 1
-                }
-            },
-            {
-                "type": "BlockBridge",
+                "type": "BlockGrass",
                 "position": {
                     "x": 1,
                     "y": 0,
@@ -100,15 +126,7 @@
                 }
             },
             {
-                "type": "BlockBridge",
-                "position": {
-                    "x": 2,
-                    "y": 0,
-                    "z": 2
-                }
-            },
-            {
-                "type": "BlockBridge",
+                "type": "BlockGrass",
                 "position": {
                     "x": 1,
                     "y": 0,
@@ -116,11 +134,1099 @@
                 }
             },
             {
-                "type": "BlockBridge",
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 1,
+                    "y": 0,
+                    "z": 11
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
                 "position": {
                     "x": 2,
                     "y": 0,
                     "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 6
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 7
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 11
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 2,
+                    "y": 0,
+                    "z": 12
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 6
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 7
+                }
+            },
+            {
+                "type": "BlockBridge",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 11
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 12
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 13
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 3,
+                    "y": 0,
+                    "z": 14
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 11
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 12
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 13
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 14
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 4,
+                    "y": 0,
+                    "z": 15
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 5
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 14
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 15
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 16
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 5,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 7
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 15
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 16
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 17
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 18
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 6,
+                    "y": 0,
+                    "z": 19
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 7,
+                    "y": 0,
+                    "z": 7
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 7,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 7,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 8,
+                    "y": 0,
+                    "z": 7
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 8,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 8,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 8
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 9,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 10,
+                    "y": 0,
+                    "z": 9
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 10,
+                    "y": 0,
+                    "z": 10
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 10,
+                    "y": 0,
+                    "z": 11
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 13,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 17,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 18,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 11,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 13,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 14,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 15,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 16,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 17,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 18,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 19,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 1
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 11,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 13,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 14,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 15,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 16,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 17,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 18,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 19,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 2
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 11,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 13,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 14,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 15,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 16,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 17,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 18,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 19,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 22,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 11,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 12,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 13,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 14,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 19,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 20,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 21,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 25,
+                    "y": 0,
+                    "z": 3
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 23,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 24,
+                    "y": 0,
+                    "z": 4
+                }
+            },
+            {
+                "type": "BlockGrass",
+                "position": {
+                    "x": 25,
+                    "y": 0,
+                    "z": 4
                 }
             }
         ]
