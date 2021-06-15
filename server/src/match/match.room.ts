@@ -13,7 +13,7 @@ export class MatchRoom extends Room<MatchState> {
     dispatcher: Dispatcher = new Dispatcher(this);
 
     async onCreate(options: any) {
-        const mapName: string = options?.map || 'cs_default'
+        const mapName: string = options?.map || 'test'
         //TODO: maybe check mapName for bad user input
         const mapDataRaw = await fsExtra.readFile(`./data/maps/${mapName}.json`)
         const mapData = JSON.parse(mapDataRaw)
