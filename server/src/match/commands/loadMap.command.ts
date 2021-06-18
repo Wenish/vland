@@ -1,5 +1,5 @@
 import { Command } from "@colyseus/command";
-import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, TeamState } from "../match.state";
+import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, SpawnState, TeamState } from "../match.state";
 
 
 interface Position {
@@ -13,58 +13,51 @@ interface FloorBlock {
     position: Position
 }
 
-interface Team {
-    id: string
-    color: string
-}
-
 interface CapturePoint {
-    id: string
     position: Position
     radius: number
 }
 
 interface CaptureFlag {
-    id: string
     position: Position
     teamId: string
 }
 
+interface Spawn {
+    position: Position
+}
+
 interface Map {
     name: string
-    floorBlocks: FloorBlock[]
-    capturePoints: CapturePoint[]
-    captureFlags: CaptureFlag[]
+    floorBlocks: { [key: string]: FloorBlock; }
+    capturePoints:  { [key: string]: CapturePoint; }
+    captureFlags: { [key: string]: CaptureFlag; }
+    spawns: { [key: string]: Spawn}
 }
 
 
 interface LoadMapPayload {
     map: Map
-    teams: Team[]
 }
 
 export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
 
-    execute({ map, teams }: LoadMapPayload) {
-        this.state.map.name = map.name;
-        map.floorBlocks.forEach((floorBlock) => {
-            this.state.map.floorBlocks.set(`${floorBlock.position.x}${floorBlock.position.y}${floorBlock.position.z}`, new FloorBlockState().assign({
+    execute(payload: LoadMapPayload) {
+        this.state.map.name = payload.map.name;
+        Object.keys(payload.map.floorBlocks).forEach((key) => {
+            const floorBlock = payload.map.floorBlocks[key]
+            this.state.map.floorBlocks.set(key, new FloorBlockState().assign({
                 type: floorBlock.type,
                 position: new PositionState().assign({
                     ...floorBlock.position
                 })
             }))
         })
-        teams.forEach((team) => {
-            this.state.teams.set(team.id, new TeamState().assign({
-                id: team.id,
-                color: team.color
-            }))
-        })
 
-        map.capturePoints.forEach((capturePoint) => {
-            this.state.map.capturePoints.set(capturePoint.id, new CapturePointState().assign({
-                id: capturePoint.id,
+        Object.keys(payload.map.capturePoints).forEach((key) => {
+            const capturePoint = payload.map.capturePoints[key]
+            this.state.map.capturePoints.set(key, new CapturePointState().assign({
+                id: key,
                 position: new PositionState().assign({
                     ...capturePoint.position
                 }),
@@ -72,13 +65,23 @@ export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
             }))
         })
 
-        map.captureFlags.forEach((captureFlag) => {
-            this.state.map.captureFlags.set(captureFlag.id, new CaptureFlagState().assign({
-                id: captureFlag.id,
+        Object.keys(payload.map.captureFlags).forEach((key) => {
+            const captureFlag = payload.map.captureFlags[key]
+            this.state.map.captureFlags.set(key, new CaptureFlagState().assign({
+                id: key,
                 position: new PositionState().assign({
                     ...captureFlag.position
                 }),
                 teamId: captureFlag.teamId
+            }))
+        })
+
+        Object.keys(payload.map.spawns).forEach((key) => {
+            const spawn = payload.map.spawns[key]
+            this.state.map.spawns.set(key, new SpawnState().assign({
+                position: new PositionState().assign({
+                    ...spawn.position
+                })
             }))
         })
     }

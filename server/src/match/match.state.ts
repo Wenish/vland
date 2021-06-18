@@ -36,11 +36,16 @@ export class TeamState extends Schema {
     @type('number') score: number = 0
 }
 
+export class SpawnState extends Schema {
+    @type(PositionState) position: PositionState
+}
+
 export class MapState extends Schema {
     @type('string') name: string
     @type({ map: FloorBlockState }) floorBlocks = new MapSchema<FloorBlockState>()
     @type({ map: CapturePointState }) capturePoints = new MapSchema<CapturePointState>()
     @type({ map: CaptureFlagState }) captureFlags = new MapSchema<CaptureFlagState>()
+    @type({ map: SpawnState }) spawns = new MapSchema<SpawnState>()
 }
 
 export class PlayerState extends Schema {

@@ -20,5 +20,8 @@ namespace GameClient.Models {
 
 		[Type(3, "map", typeof(MapSchema<CaptureFlagState>))]
 		public MapSchema<CaptureFlagState> captureFlags = new MapSchema<CaptureFlagState>();
+
+		[Type(4, "map", typeof(MapSchema<SpawnState>))]
+		public MapSchema<SpawnState> spawns = new MapSchema<SpawnState>();
 	}
 }
