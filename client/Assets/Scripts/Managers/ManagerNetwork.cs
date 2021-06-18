@@ -37,7 +37,10 @@ namespace GameClient.Managers
             try
             {
                 Debug.Log("Connected to server");
-                GameRoom = await ColyseusClient.JoinOrCreate<MatchState>("match");
+                var options = new Dictionary<string, object>();
+                options.Add("token", ManagerSettings.Instance.Token);
+                options.Add("map", ManagerSettings.Instance.Map);
+                GameRoom = await ColyseusClient.JoinOrCreate<MatchState>("match", options);
                 
                 GameRoom.State.map.capturePoints.OnAdd += StateHandlerCapturePoint.Instance.OnAdd;
                 GameRoom.State.map.capturePoints.OnChange += StateHandlerCapturePoint.Instance.OnChange;

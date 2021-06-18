@@ -10,6 +10,7 @@ namespace GameClient.Managers
         public string ServerIp = null;
         public string ServerPort = null;
         public string Token = null;
+        public string Map = null;
         public GameObject MapFloor;
         public GameObject CapturePoint;
         public GameObject CaptureFlag;
@@ -40,6 +41,10 @@ namespace GameClient.Managers
             var token = GetArg("-token");
             Token = token != null ? token : Token;
             Debug.Log(Token);
+
+            var map = GetArg("-map");
+            Map = map != null ? map : Map;
+            Debug.Log(Map);
 
             // Singleton Stuff
             if (_instance != null && _instance != this)
