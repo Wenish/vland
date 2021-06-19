@@ -1,6 +1,5 @@
 import { Command } from "@colyseus/command";
-import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, SpawnState, TeamState } from "../match.state";
-
+import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, SpawnState } from "../match.state";
 
 interface Position {
     x: number
@@ -30,19 +29,36 @@ interface Spawn {
 interface Map {
     name: string
     floorBlocks: { [key: string]: FloorBlock; }
-    capturePoints:  { [key: string]: CapturePoint; }
+    capturePoints: { [key: string]: CapturePoint; }
     captureFlags: { [key: string]: CaptureFlag; }
-    spawns: { [key: string]: Spawn}
+    spawns: { [key: string]: Spawn }
+}
+
+interface Grid {
+    width: number
+    height: number
 }
 
 
 interface LoadMapPayload {
     map: Map
+    grid: Grid
 }
 
 export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
 
     execute(payload: LoadMapPayload) {
+        const gridWidth = 5 || payload.grid.width
+        const gridHeight = 4 || payload.grid.height
+        const matrix2d = new Array(gridHeight).fill(0).map((value, index) => {
+            return new Array(gridWidth).fill(index).map((value, index) => {
+                return (value * gridWidth) + index + 1
+            })
+        });
+        console.log(matrix2d)
+        // const meshPolygonPoints = buildPolysFromGridMap<number>(matrix2d)
+        //console.log(meshPolygonPoints)
+
         this.state.map.name = payload.map.name;
         Object.keys(payload.map.floorBlocks).forEach((key) => {
             const floorBlock = payload.map.floorBlocks[key]
