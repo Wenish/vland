@@ -1,6 +1,8 @@
 import { Command } from "@colyseus/command";
 import { CaptureFlagState, CapturePointState, FloorBlockState, FloorBlockTypes, MatchState, PositionState, SpawnState } from "../match.state";
 
+import * as NavMesh from 'navmesh'
+
 interface Position {
     x: number
     y: number
@@ -56,8 +58,9 @@ export class LoadMapCommand extends Command<MatchState, LoadMapPayload> {
             })
         });
         console.log(matrix2d)
-        // const meshPolygonPoints = buildPolysFromGridMap<number>(matrix2d)
-        //console.log(meshPolygonPoints)
+        const meshPolygonPoints = NavMesh.buildPolysFromGridMap<number>(matrix2d)
+        console.log(meshPolygonPoints)
+        const navMesh = new NavMesh.NavMesh(meshPolygonPoints);
 
         this.state.map.name = payload.map.name;
         Object.keys(payload.map.floorBlocks).forEach((key) => {
