@@ -1,4 +1,5 @@
 import { MapSchema, Schema, type } from "@colyseus/schema"
+import NavMesh from "navmesh"
 
 export class PositionState extends Schema {
     @type('number') x: number = 0
@@ -77,4 +78,6 @@ export class MatchState extends Schema {
     @type({ map: TeamState }) teams = new MapSchema<TeamState>()
     @type({ map: PlayerState }) players = new MapSchema<PlayerState>()
     @type({ map: UnitState }) units = new MapSchema<UnitState>()
+
+    navMesh: NavMesh;
 }
