@@ -11,13 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          path: client
           lfs: true
-
       # Cache
       - uses: actions/cache@v2
         with:
-          path: Library
+          path: client/Library
           key: Library
 
       # Build
@@ -26,6 +24,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          projectPath: client
           targetPlatform: StandaloneWindows64
           unityVersion: 2021.1.10f1
           allowDirtyBuild: true
@@ -34,4 +33,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Build
-          path: build
+          path: client/build
