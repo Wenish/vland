@@ -11,6 +11,7 @@ app.use('/colyseus', monitor());
 const gameServer = new Server({
     server: createServer(app)
   });
+  
 gameServer.define('match', MatchRoom);
 gameServer.listen(port)
 logger(`Listening on Port: ${port}`, 'GameServer')
