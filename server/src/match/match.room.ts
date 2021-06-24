@@ -14,7 +14,7 @@ export class MatchRoom extends Room<MatchState> {
 
     async onCreate(options: any) {
         const mapName: string = options?.map || 'cs_default'
-        logger(`Loading map: ${mapName}`)
+        logger(`Loading map: ${mapName}`, 'GameRoom')
         //TODO: maybe check mapName for bad user input
         const mapDataRaw = await fsExtra.readFile(`./data/maps/${mapName}.json`)
         const mapData = JSON.parse(mapDataRaw)
