@@ -13,3 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
+
+      # Output
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path:  |
+            dist/
+            data/
+            package-lock.json
+            package.json
