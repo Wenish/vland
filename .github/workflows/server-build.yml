@@ -1,8 +1,6 @@
 name: Build Server Package
 'on':
   push:
-    branches:
-      - main
     paths:
       - 'server/**'
 defaults:
