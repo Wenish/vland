@@ -17,7 +17,7 @@ jobs:
       # Output
       - uses: actions/upload-artifact@v2
         with:
-          name: Build
+          name: Build-Server
           path: |
             server/dist/
             server/data/

@@ -45,5 +45,5 @@ jobs:
       # Output
       - uses: actions/upload-artifact@v2
         with:
-          name: Build
+          name: Build-Client
           path: build
