@@ -16,6 +16,12 @@ jobs:
         with:
           lfs: true
 
+      # Cache
+      - uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library
+
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
@@ -23,6 +29,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: StandaloneWindows64
+          unityVersion: 2021.1.10f1
 
       # Output
       - uses: actions/upload-artifact@v2
