@@ -1,5 +1,6 @@
 name: 🦁 Build Server Package
 'on':
+  workflow_dispatch: {}
   push:
     paths:
       - 'server/**'
