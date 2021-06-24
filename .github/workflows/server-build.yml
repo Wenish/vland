@@ -18,8 +18,8 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Build
-          path:  |
-            dist/
-            data/
-            package-lock.json
-            package.json
+          path: |
+            server/dist/
+            server/data/
+            server/package-lock.json
+            server/package.json
