@@ -1,4 +1,4 @@
-name: Build Server Package
+name: 🦁 Build Server Package
 'on':
   push:
     paths:
