@@ -6,6 +6,10 @@ on:
     paths:
       - server/**
 
+defaults:
+  run:
+    working-directory: server
+
 jobs:
   build:
     name: Build Server Package
