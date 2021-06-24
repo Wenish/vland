@@ -3,6 +3,8 @@ name: Build Server Package
   push:
     branches:
       - main
+    paths:
+      - 'server/**'
 defaults:
   run:
     working-directory: server
