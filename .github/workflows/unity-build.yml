@@ -6,7 +6,17 @@ name: 🐼 Build Unity Game Client
       - 'client/**'
 jobs:
   build:
+    name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        projectPath:
+          - client
+        unityVersion:
+          - 2021.1.10f1
+        targetPlatform:
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
     steps:
       # Checkout
       - name: Checkout repository
@@ -16,8 +26,11 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-          path: client/Library
-          key: Library
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
+          restore-keys: |
+            Library-${{ matrix.projectPath }}-
+            Library-
 
       # Build
       - name: Build project
@@ -25,10 +38,9 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: client
-          targetPlatform: StandaloneWindows64
-          unityVersion: 2021.1.10f1
-          allowDirtyBuild: true
+          projectPath: ${{ matrix.projectPath }}
+          unityVersion: ${{ matrix.unityVersion }}
+          targetPlatform: ${{ matrix.targetPlatform }}
 
       # Output
       - uses: actions/upload-artifact@v2
