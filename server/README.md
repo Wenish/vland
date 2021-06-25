@@ -17,5 +17,5 @@ npm run start:dev
 npm run build
 
 # run production build
-npm run start:prod
+npm run start
 ```
