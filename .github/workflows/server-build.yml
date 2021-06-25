@@ -1,4 +1,4 @@
-name: 🦁 Build Server Package
+name: 🦁 Server Package
 'on':
   workflow_dispatch: {}
   push:
@@ -9,6 +9,7 @@ defaults:
     working-directory: server
 jobs:
   build:
+    name: Build Server Package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +25,7 @@ jobs:
             server/package-lock.json
             server/package.json
   deploy:
+    name: Deploy Server Package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
