@@ -32,7 +32,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: Build-Server
-      - run: git add .
+      - run: git init .
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
