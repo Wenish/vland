@@ -12,6 +12,8 @@ Target Audience: Gamer
 
 [![.github/workflows/server-build.yml](https://github.com/Wenish/demoMap/actions/workflows/server-build.yml/badge.svg)](https://github.com/Wenish/demoMap/actions/workflows/server-build.yml)
 
+[![🦁 Server Heroku Deploy](https://github.com/Wenish/vland/actions/workflows/server-heroku-deploy.yml/badge.svg)](https://github.com/Wenish/vland/actions/workflows/server-heroku-deploy.yml)
+
 Tech: [Node](https://nodejs.org/)
 
 Target Audience: Server Hoster
