@@ -7,6 +7,7 @@ namespace GameClient.Managers
 {
     public class ManagerSettings : MonoBehaviour
     {
+        public string Protocol = null;
         public string ServerIp = null;
         public string ServerPort = null;
         public string Token = null;

@@ -33,7 +33,8 @@ namespace GameClient.Managers
         async void Start()
         {
             Debug.Log("Manager Network Start");
-            ColyseusClient = new ColyseusClient("ws://" + ManagerSettings.Instance.ServerIp + ":" + ManagerSettings.Instance.ServerPort);
+            var url = $"{ManagerSettings.Instance.Protocol}://{ManagerSettings.Instance.ServerIp}:{ManagerSettings.Instance.ServerPort}";
+            ColyseusClient = new ColyseusClient(url);
             try
             {
                 Debug.Log("Connected to server");

@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c932729a7ad4ad4fbff32f56c48ed31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Protocol: ws
   ServerIp: localhost
   ServerPort: 3000
   Token: 
