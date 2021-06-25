@@ -1,4 +1,4 @@
-name: 🦁 Build Server Package
+name: 🦁 Server Heroku Deploy
 'on':
   workflow_dispatch: {}
   push:

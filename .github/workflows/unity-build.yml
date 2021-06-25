@@ -1,4 +1,4 @@
-name: 🐼 Build Unity Game Client
+name: 🐼 Unity Build
 'on':
   workflow_dispatch: {}
   push:

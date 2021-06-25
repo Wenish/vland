@@ -1,4 +1,4 @@
-name: 🦁 Build Server Package
+name: 🦁 Server Build
 'on':
   workflow_dispatch: {}
   push:
