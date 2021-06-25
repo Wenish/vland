@@ -8,6 +8,9 @@ import logger from "./services/logger.service";
 const port = parseInt(process.env.PORT, 10) || 3000
 const app = express()
 app.use('/colyseus', monitor());
+app.get('/', function (req, res) {
+  res.send('200 OK')
+})
 const gameServer = new Server({
     server: createServer(app)
   });
