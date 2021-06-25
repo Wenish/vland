@@ -5,7 +5,7 @@ import { monitor } from "@colyseus/monitor";
 import { MatchRoom } from "./match/match.room";
 import logger from "./services/logger.service";
 
-const port = parseInt(process.env.port, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 3000
 const app = express()
 app.use('/colyseus', monitor());
 const gameServer = new Server({
