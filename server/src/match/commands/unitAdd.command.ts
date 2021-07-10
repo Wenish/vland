@@ -3,7 +3,7 @@ import { Command } from "@colyseus/command";
 import { MatchState, UnitState } from "../match.state";
 
 interface UnitAddPayload {
-
+    unitId?: string
 }
 
 export class UnitAddCommand extends Command<MatchState, UnitAddPayload> {
@@ -15,6 +15,7 @@ export class UnitAddCommand extends Command<MatchState, UnitAddPayload> {
         const unit = new UnitState().assign({
             position: spawn.position.clone()
         })
+        unit.id = payload.unitId || unit.id
         this.state.units.set(unit.id, unit)
     }
 }

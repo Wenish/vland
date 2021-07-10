@@ -1,6 +1,7 @@
 import http from "http";
 import { Room, Client } from "colyseus";
 import fsExtra from 'fs-extra'
+import shortid from 'shortid'
 import logger from "../services/logger.service";
 import { MatchState } from "./match.state";
 import { Dispatcher } from "@colyseus/command";
@@ -33,9 +34,14 @@ export class MatchRoom extends Room<MatchState> {
     }
 
     onJoin(client: Client, options: any, auth: any) {
-        this.dispatcher.dispatch(new UnitAddCommand(), {})
+        const unitId = shortid.generate()
+        console.log(unitId)
+        this.dispatcher.dispatch(new UnitAddCommand(), {
+            unitId: unitId
+        })
         this.dispatcher.dispatch(new OnJoinCommand(), {
-            sessionId: client.sessionId
+            sessionId: client.sessionId,
+            unitId: unitId
         });
         logger(`onJoin Client: ${client.sessionId}`, 'GameRoom')
     }
