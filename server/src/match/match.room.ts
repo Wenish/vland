@@ -7,6 +7,7 @@ import { Dispatcher } from "@colyseus/command";
 import { OnJoinCommand } from "./commands/onJoin.command";
 import { OnLeaveCommand } from "./commands/onLeave.command";
 import { LoadMapCommand } from "./commands/loadMap.command";
+import { UnitAddCommand } from "./commands/unitAdd.command";
 
 export class MatchRoom extends Room<MatchState> {
 
@@ -32,6 +33,7 @@ export class MatchRoom extends Room<MatchState> {
     }
 
     onJoin(client: Client, options: any, auth: any) {
+        this.dispatcher.dispatch(new UnitAddCommand(), {})
         this.dispatcher.dispatch(new OnJoinCommand(), {
             sessionId: client.sessionId
         });

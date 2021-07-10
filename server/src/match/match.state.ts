@@ -1,3 +1,4 @@
+import shortid from 'shortid'
 import { MapSchema, Schema, type } from "@colyseus/schema"
 import NavMesh from "navmesh"
 
@@ -52,6 +53,7 @@ export class MapState extends Schema {
 export class PlayerState extends Schema {
     @type('string') sessionId: string
     @type('string') username: string = 'Player'
+    @type('string') unitId: string
 }
 
 export class BarState extends Schema {
@@ -61,7 +63,7 @@ export class BarState extends Schema {
 }
 
 export class UnitState extends Schema {
-    @type('string') id: string
+    @type('string') id: string = shortid.generate()
     @type('string') name: string = 'Unit Name'
     @type(PositionState) position: PositionState
     @type('number') baseMoveSpeed: number
