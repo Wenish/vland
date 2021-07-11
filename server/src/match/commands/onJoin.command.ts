@@ -15,5 +15,4 @@ export class OnJoinCommand extends Command<MatchState, OnJoinPayload> {
             unitId: payload.unitId
         }))
     }
-
 }
