@@ -54,6 +54,10 @@ namespace GameClient.Managers
                 GameRoom.State.map.floorBlocks.OnAdd += StateHandlerFloorBlocks.Instance.OnAdd;
                 GameRoom.State.map.floorBlocks.OnChange += StateHandlerFloorBlocks.Instance.OnChange;
                 GameRoom.State.map.floorBlocks.OnRemove += StateHandlerFloorBlocks.Instance.OnRemove;
+
+                GameRoom.State.units.OnAdd += StateHandlerUnit.Instance.OnAdd;
+                GameRoom.State.units.OnChange += StateHandlerUnit.Instance.OnChange;
+                GameRoom.State.units.OnRemove += StateHandlerUnit.Instance.OnRemove;
             }
             catch
             {
