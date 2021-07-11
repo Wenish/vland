@@ -35,7 +35,6 @@ export class MatchRoom extends Room<MatchState> {
 
     onJoin(client: Client, options: any, auth: any) {
         const unitId = shortid.generate()
-        console.log(unitId)
         this.dispatcher.dispatch(new UnitAddCommand(), {
             unitId: unitId
         })
