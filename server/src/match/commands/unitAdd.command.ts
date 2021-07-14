@@ -8,10 +8,9 @@ interface UnitAddPayload {
 
 export class UnitAddCommand extends Command<MatchState, UnitAddPayload> {
     execute(payload: UnitAddPayload) {
-        const spawnsSize = this.state.map.spawns.size
-        const randomSpawnNumber = (Math.floor(Math.random() * spawnsSize))
-        const spawnKey = this.state.map.spawns['$indexes'].get(randomSpawnNumber)
-        const spawn = this.state.map.spawns.get(spawnKey)
+        const spawnKeys = Array.from(this.state.map.spawns.keys())
+        const randomSpawnNumber = Math.floor(Math.random() * spawnKeys.length);
+        const spawn = this.state.map.spawns.get( spawnKeys[randomSpawnNumber] )
         const unit = new UnitState().assign({
             position: spawn.position.clone()
         })
